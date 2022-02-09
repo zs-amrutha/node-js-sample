@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: node-js-sample
+spec:
+  template:
+    metadata:
+      labels:
+        app: node-js-sample
+    spec:
+      containers:
+        - name: ci
+          image: "amruthac/sample-node:latest"
+          env:
+          - name: IN_CLUSTER
+            value: "true"
+#           - name: WORKFLOWS_NAMESPACE
+#             value: default
+#           - name: NAMESPACE
+#             value: default
+#           - name: ARGO_CI_IMAGE
+#             value: "argoproj/argoci:latest"
+          ports:
+          - containerPort: 5000
