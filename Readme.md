@@ -1,4 +1,8 @@
 # Deploy NodeJS Application using Argocd
+Docker Commands - https://code-maven.com/slides/docker/run-container-as-a-daemon
+
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+
 
 Clone NodeJs application Repo :
 ```
