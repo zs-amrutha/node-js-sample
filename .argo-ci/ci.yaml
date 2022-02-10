@@ -29,4 +29,4 @@ spec:
       image: node:9.4.0
       command: [sh, -c]
       args: [npm install && npm run build]
-      workingDir: ./src
+      workingDir: ./
