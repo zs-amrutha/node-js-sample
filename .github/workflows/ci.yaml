@@ -5,16 +5,11 @@ name: CI-pipeline
       - master    
 jobs:
   build_and_deploy:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
-          id
-          npm i
-          npm run build
-          cd functions
-          npm i
-          cd -  
+          cd - 
           - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
           - docker build -t <my.container.registry.io>/<my_app>:<my_tag> .
           - docker push <my.container.registry.io>/<my_app>:<my_tag>
